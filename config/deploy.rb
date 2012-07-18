@@ -7,7 +7,7 @@ set :user, 'www-deploy'
 set :deploy_to,   "/var/www/"
 set :deploy_via, :remote_cache
 set :use_sudo, false
-set :branch, 'exclude-filter'
+set :branch, 'exclude-file'
 set :copy_exclude, ["readme.md", "notes.md", "Capfile", "config"]
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
