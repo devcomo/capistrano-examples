@@ -8,7 +8,7 @@ set :deploy_to,   "/var/www/"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 set :branch, 'post-deploy-hook'
-set :twitterUser, 'jamescarr'
+set :twitter_user, 'jamescarr'
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 ssh_options[:forward_agent] = true
@@ -18,10 +18,9 @@ role :web, site                      # Your HTTP server, Apache/etc
 role :app, site                      # Your HTTP server, Apache/etc
 
 
-namespace twitter do
-  task user_image do
-    run "wget /users/profile_image/#{twitterUser} #{release_path}/user.html"
+namespace :twitter do
+  task :user_image do
+    run "cd #{release_path} && wget http://api.twitter.com/1/users/profile_image/#{twitter_user}"
   end
-end
 end
 after "deploy:finalize_update", "twitter:user_image" 
