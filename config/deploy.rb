@@ -7,6 +7,7 @@ set :user, 'www-deploy'
 set :deploy_to,   "/var/www/"
 set :deploy_via, :remote_cache
 set :use_sudo, false
+set :branch, 'static-site-simple'
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 ssh_options[:forward_agent] = true
