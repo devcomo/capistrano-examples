@@ -21,6 +21,7 @@ role :app, site                      # Your HTTP server, Apache/etc
 namespace :twitter do
   task :user_image do
     run "cd #{release_path} && wget http://api.twitter.com/1/users/profile_image/#{twitter_user}"
+    run "mv #{release_path}/#{twitter_user} #{release_path}/twitter.jpeg"
   end
 end
 after "deploy:finalize_update", "twitter:user_image" 
