@@ -1,5 +1,5 @@
 set :application, "awesome-static"
-set :repository,  "git@github.com:jamescarr/capistrano-example.git"
+set :repository,  "git@github.com:CoMoRichWebGroup/capistrano-examples.git"
 set :site, "my.example.com"
 
 set :scm, :git
