@@ -1,6 +1,6 @@
 # Static Site
 
-Capistrano example for a static site.
+Capistrano examples used in my [July ComoRichWeb](http://comorichweb.posterous.com/july-2012-capistrano-and-sinatra) Talk. [Slides](http://portal.sliderocket.com/BKDDH/My-Presentation-2)
 
 
 ## Pre-requisites
