@@ -30,3 +30,14 @@ Host my.example.com
 * run cap deploy
 * wget http://my.example.com | cat
 * profit
+
+
+## Topic Branches
+Not breaking from my usual setup, each topic I covered is divided into git branches. 
+
+* static-site-simple - the base I started with... simply deploy the project to the remote server
+* exclude-files - excludes non-web files from deployment
+* post-deploy-hook uses a post-deploy hook to download a profile image from twitter and place it under the document root.
+
+
+Enjoy!
